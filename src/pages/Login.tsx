@@ -9,8 +9,8 @@ import { useToast } from "@/hooks/use-toast";
 import { Loader2, Shield } from "lucide-react";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("useradmin@gmail.com");
+  const [password, setPassword] = useState("123456");
   const [isLoading, setIsLoading] = useState(false);
   
   const { signIn } = useAuthContext();
