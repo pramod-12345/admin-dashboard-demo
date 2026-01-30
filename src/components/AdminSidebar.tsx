@@ -10,10 +10,9 @@ const navItems = [
   { name: "Users", href: "/users", icon: Users },
 ];
 
-export function AdminSidebar() {
+export function AdminSidebar({ isMobileOpen, setIsMobileOpen }: { isMobileOpen: boolean; setIsMobileOpen: (open: boolean) => void }) {
   const location = useLocation();
   const { signOut, user } = useAuthContext();
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const handleSignOut = async () => {
     await signOut();
@@ -75,12 +74,12 @@ export function AdminSidebar() {
   return (
     <>
       {/* Mobile menu button */}
-      <button
+      {/* <button
         onClick={() => setIsMobileOpen(!isMobileOpen)}
         className="fixed left-4 top-4 z-50 flex h-10 w-10 items-center justify-center rounded-lg bg-sidebar text-sidebar-foreground lg:hidden"
       >
         {isMobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-      </button>
+      </button> */}
 
       {/* Mobile overlay */}
       {isMobileOpen && (

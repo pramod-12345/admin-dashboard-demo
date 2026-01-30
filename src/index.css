@@ -134,4 +134,18 @@
   .card-shadow-lg {
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   }
+
+  @keyframes toast-progress-shrink {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+
+  .toast-progress-bar {
+    animation: toast-progress-shrink var(--toast-duration, 5000ms) linear forwards;
+    transform-origin: left;
+  }
 }
